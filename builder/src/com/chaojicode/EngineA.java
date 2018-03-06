@@ -1,8 +1,9 @@
 package com.chaojicode;
 
-public class EngineA {
+public class EngineA implements Engine{
+
     @Override
-    public String toString() {
-        return "this is a";
+    public void run() {
+        System.out.println("A run.");
     }
 }

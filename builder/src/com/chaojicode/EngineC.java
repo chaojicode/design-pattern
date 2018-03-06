@@ -1,8 +1,9 @@
 package com.chaojicode;
 
-public class EngineC {
+public class EngineC implements Engine{
+
     @Override
-    public String toString() {
-        return "this is c";
+    public void run() {
+        System.out.println("C run.");
     }
 }

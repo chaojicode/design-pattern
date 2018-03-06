@@ -3,13 +3,16 @@ package com.chaojicode;
 public class Main {
 
     public static void main(String[] args) {
-	    Engine engine1 = new Engine(new ABBuilder());
-        engine1.getEngine();
+	    ProductDirector d1 = new ProductDirector(new ABBuilder());
+	    Product p1 = d1.build();
+	    p1.allRun();
 
-        Engine engine2 = new Engine(new BCBuilder());
-        engine2.getEngine();
+        ProductDirector d2 = new ProductDirector(new ACBuilder());
+        Product p2 = d2.build();
+        p2.allRun();
 
-        Engine engine3 = new Engine(new ACBuilder());
-        engine3.getEngine();
+        ProductDirector d3 = new ProductDirector(new BCBuilder());
+        Product p3 = d3.build();
+        p3.allRun();
     }
 }

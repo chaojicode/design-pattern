@@ -1,13 +1,12 @@
 package com.chaojicode;
 
 public class ABBuilder implements Builder {
-    @Override
-    public Object buildFirst() {
-        return new EngineA();
-    }
 
     @Override
-    public Object buildLast() {
-        return new EngineB();
+    public Product build() {
+        Product product = new Product();
+        product.setFirstPart(new EngineA());
+        product.setLastPart(new EngineB());
+        return product;
     }
 }
